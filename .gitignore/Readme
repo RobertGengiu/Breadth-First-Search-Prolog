@@ -1,0 +1,34 @@
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<Tema2>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+Am rezolvat tema cu ajutorul algoritmulului Breadth-First-Search care produce cel 
+mai scurt drum pentru un graf fara costuri. Algoritmul incepe cu sursa si exploreaza
+mai intai nodurile vecine acestuia, apoi trece la vecinii de pe urmatoarele nivele. 
+Algoritmul se sfarseste cand am dat de destinatie, sau a fost explorat tot graful si 
+atunci predicatul va intoarce false. Avantajul fata de DFS este ca nu generam toate 
+drumurile si apoi il alegem pe cel mai scurt dintre acestea. Intr-o coada vom retine 
+vecinii nevizitati ai unui nod, iar intr-o lista vom tine parintii, care de fapt 
+reprezinta path-ul inversat.
+
+Am implementat predicate ajutatoare ca:
+->reverse2 - inverseaza o lista
+->append2 - concateneaza doua liste 
+->connected - intoarce true daca exista muchie de la X la Y in multimea E
+->member2 - intoarece true daca exista elementul E in lista L
+->getColor -intoarce culoarea pentru un nod
+->buildQueue -construieste coada
+->getNeighbours -obtine lista de vecini eligibili
+->global -verifica daca un path contine numai aceeasi X culoare
+->future -verifica daca la un moment dat se gaseste culoare X
+->until -verifica daca toate nodurile au culoare C1 pana la intalnirea unui C1
+
+Predicatul findall l-am utilizat sa gaseasca toti vecinii nevizitati, ai unui
+nod si pe baza carora construisc coada, concatenand si cu restul de elemente
+ramase in coada.
+
+Pentru formule am construit cate un tip de predicat pentru fiecare tip. Iar daca
+path-ul nu unifica cu formula, se va incerca recalcularea lui pana se gaseste unul
+sau nu se sfarsesc drumurile. 
+
+Nume : Gengiu Robert
+Grupa: 322 CB
